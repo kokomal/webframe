@@ -30,10 +30,10 @@ public class PropertiesTest {
     @Test
     public void testProp() {
         System.out.println("Reading from properties, the name is --- " + myProperties.getMyName());
-        System.out.println("Reading from properties, the country is --- " +myProperties.getMyCountry());
-        System.out.println("Reading from properties, the slogan is --- " +myProperties.getMySlogan());
+        System.out.println("Reading from properties, the country is --- " + myProperties.getMyCountry());
+        System.out.println("Reading from properties, the slogan is --- " + myProperties.getMySlogan());
     }
-    
+
     @Test
     public void testRandomProp() {
         System.out.println("My pet name is " + myProperties.getMyPetName());

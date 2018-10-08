@@ -46,3 +46,14 @@ selfprops:
     petage: ${random.int[1,10]} #随机int
   today:
     temperature: ${random.int[10,40]} #随机温度
+  foo: bar # 对应MyPropertiesWithoutAnnotation的foo属性
+  database-platform: sql # 对应MyPropertiesWithoutAnnotation的databasPlatform属性
+  posts[0]: PLAYBOY # String类型的list
+  posts[1]: PLAYGIRL # 同上
+  pojo: # 对应复合类型list
+    posts[0]:
+      title: BREAKING NEWS Alpha
+      content: SADDAM was captured
+    posts[1]:
+      title: BREAKING NEWS Beta
+      content: BIN LADEN was shot   

@@ -1,7 +1,7 @@
 /**
  * @Title: MyProperties.java
  * @Package: yuanjun.chen.random
- * @Description: TODO(用一句话描述该文件做什么)
+ * @Description: 自定义配置文件的属性类
  * @author: 陈元俊
  * @date: 2018年9月30日 上午9:03:51
  * @version V1.0
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @ClassName: MyProperties
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: 自定义配置文件的属性类，注意可以在配置文件里面内联引用
  * @author: 陈元俊
  * @date: 2018年9月30日 上午9:03:51
  */
