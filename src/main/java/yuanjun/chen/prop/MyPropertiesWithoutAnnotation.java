@@ -10,7 +10,6 @@
 package yuanjun.chen.prop;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 /**   
  * @ClassName: MyPropertiesWithoutAnnotation   

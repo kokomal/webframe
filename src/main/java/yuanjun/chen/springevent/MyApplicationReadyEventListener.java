@@ -13,6 +13,6 @@ public class MyApplicationReadyEventListener implements ApplicationListener<Appl
     @Override
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         applicationReadyEvent.getApplicationContext();
-        System.out.println("<----4-----第四步Application完全加载成功--------->");
+        System.out.println("<----5-----第五步Application完全加载成功--------->");
     }
 }
