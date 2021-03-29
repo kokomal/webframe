@@ -25,9 +25,7 @@ public class MyApplicationEnvironmentPreparedEventListener
         ConfigurableEnvironment environment = event.getEnvironment();
         MutablePropertySources maps = environment.getPropertySources();
         if (maps != null) {
-            Iterator<PropertySource<?>> its = maps.iterator();
-            while (its.hasNext()) {
-                PropertySource<?> ps = its.next();
+            for (PropertySource<?> ps : maps) {
                 System.out.print(ps.getName() + "-----");
                 System.out.print(ps.getSource() + "-----");
                 System.out.println(ps.getClass());

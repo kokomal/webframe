@@ -1,11 +1,6 @@
 package yuanjun.chen.springseq;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.*;
 
 /**
  * @author qsk
@@ -56,7 +51,9 @@ public class Person implements BeanFactoryAware, BeanNameAware,
                 + phone + "]";
     }
 
-    /** 这是BeanFactoryAware接口方法. */
+    /**
+     * 这是BeanFactoryAware接口方法.
+     */
     @Override
     public void setBeanFactory(BeanFactory arg0) {
         System.out
@@ -64,32 +61,42 @@ public class Person implements BeanFactoryAware, BeanNameAware,
         this.beanFactory = arg0;
     }
 
-    /** 这是BeanNameAware接口方法. */
+    /**
+     * 这是BeanNameAware接口方法.
+     */
     @Override
     public void setBeanName(String arg0) {
         System.out.println("【BeanNameAware接口】调用BeanNameAware.setBeanName()");
         this.beanName = arg0;
     }
 
-    /** 这是InitializingBean接口方法. */
+    /**
+     * 这是InitializingBean接口方法.
+     */
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         System.out
                 .println("【InitializingBean接口】调用InitializingBean.afterPropertiesSet()");
     }
 
-    /** 这是DiposibleBean接口方法. */
+    /**
+     * 这是DiposibleBean接口方法.
+     */
     @Override
-    public void destroy() throws Exception {
+    public void destroy() {
         System.out.println("【DiposibleBean接口】调用DiposibleBean.destory()");
     }
 
-    /** 通过<bean>的init-method属性指定的初始化方法. */
+    /**
+     * 通过<bean>的init-method属性指定的初始化方法.
+     */
     public void myInit() {
         System.out.println("【init-method】调用<bean>的init-method属性指定的初始化方法");
     }
 
-    /** 通过<bean>的destroy-method属性指定的初始化方法. */
+    /**
+     * 通过<bean>的destroy-method属性指定的初始化方法.
+     */
     public void myDestory() {
         System.out.println("【destroy-method】调用<bean>的destroy-method属性指定的初始化方法");
     }

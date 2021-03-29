@@ -1,8 +1,5 @@
 package yuanjun.chen.mockmvc;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +13,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import yuanjun.chen.facade.DemoController;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 // 较新版的Spring Boot取消了@SpringApplicationConfiguration这个注解，用@SpringBootTest就可以了
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MockServletContext.class)
@@ -25,7 +26,7 @@ public class SimpleMockMvcTests {
     private MockMvc mvc;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         mvc = MockMvcBuilders.standaloneSetup(new DemoController()).build();
     }
 

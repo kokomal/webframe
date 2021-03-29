@@ -9,16 +9,12 @@
  */
 package yuanjun.chen.jwt;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import io.jsonwebtoken.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+
+import java.util.Date;
+import java.util.Map;
 
 /**
  * @ClassName: JWTUtils
@@ -72,7 +68,4 @@ public class JWTUtils {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        
-    }
 }

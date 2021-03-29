@@ -9,12 +9,13 @@
  */
 package yuanjun.chen.jwt;
 
-import java.util.HashMap;
-import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import yuanjun.chen.jwt.JWTUtils.Packet;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName: JwtSinglyTest
@@ -29,9 +30,9 @@ public class JwtSinglyTest {
     private static final Logger logger = LogManager.getLogger(JwtSinglyTest.class);
 
     /**
+     * @throws Exception
      * @Title: testJwt
      * @Description: 测试JWT的自包含加密，好处在于JWT是自解释的密钥，缺点是加密有一点慢
-     * @throws Exception
      * @return: void
      */
     @Test
@@ -65,7 +66,7 @@ public class JwtSinglyTest {
     }
 
     @Test
-    public void testJwtHeavy() throws Exception {
+    public void testJwtHeavy() {
         Long t1 = System.currentTimeMillis();
 
         Packet packet = new Packet();
